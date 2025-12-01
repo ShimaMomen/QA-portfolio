@@ -1,15 +1,14 @@
 # Projektübersicht
-Die vorliegende Dokumentation beschreibt die manuelle Testdurchführung für die Webkomponente „Mehrfacheingabe“, mit der Benutzer mehrere Suchkriterien eingeben können.
-Ziel des Tests ist es zu überprüfen, ob die Komponente korrekt auf doppelte Eingaben reagiert, diese markiert, zählt und entsprechende Hinweise anzeigt.
-
-Die Akzeptanzkriterien wurden gemeinsam mit dem Product Owner definiert und bilden die Grundlage dieses Testdesigns.
+Die vorliegende Dokumentation beschreibt die manuelle Testdurchführung für die Webkomponente „Mehrfacheingabe“, mit der Benutzer mehrere Suchkriterien(Nummern) eingeben können.
+Ziel des Tests ist es zu überprüfen, ob die Komponente korrekt auf doppelte Eingaben reagiert, diese markiert und entsprechende Hinweise anzeigt.
 
 # Testobjekt
-- Komponente: Mehrfacheingabe (Multiple Input Field)  [Sie können es hier sehen:](https://www.sew-eurodrive.de/os/ecs/)
-- Systemtyp: Webanwendung  
+- Komponente: Mehrfacheingabe (Multiple Input Field)  [Sie können es hier sehen](https://www.sew-eurodrive.de/os/ecs/)
+- Systemtyp: Webkomponente  
 - Funktionalität: Eingabe, Validierung und Anzeige von mehrfach vorkommenden Suchkriterien
 
-# Abnahmekriterien / Acceptance Criteria
+# Abnahmekriterien / Acceptance Criteria  
+Die Akzeptanzkriterien wurden gemeinsam mit dem Product Owner definiert und bilden die Grundlage dieses Testdesigns
 
 1. Sollte der User mehrere gleiche Suchkriterieren in die Mehrfacheingabe eingeben, wird er automatisch darauf hingewiesen.  
 2. Anzeige der Gesamtzahl der Einträge oberhalb des Eingabefeldes (erst zählen, wenn wirklich ein neuer "Wert" eingegeben wird).  
@@ -21,11 +20,10 @@ Die Akzeptanzkriterien wurden gemeinsam mit dem Product Owner definiert und bild
 # Testziele
 Basierend auf den Akzeptanzkriterien soll sichergestellt werden, dass:
 
-1-Doppelte Suchkriterien erkannt und der Nutzer darauf hingewiesen wird.  
-2-Die Gesamtzahl der eindeutigen Einträge korrekt berechnet und oberhalb des Eingabefeldes angezeigt wird.  
-3-Doppelte Suchkriterien visuell (gelb) markiert werden.  
-4-Alle mehrfach eingegebenen Suchkriterien entsprechend markiert werden.  
-5-Ein gelber Tag-Hinweis „Doppeltes Suchkriterium“ oberhalb des Eingabefeldes angezeigt wird.  
-6-Wird ein doppelter Wert wieder gelöscht, verschwinden alle Hinweise und Markierungen wieder.
+1. Doppelte Suchkriterien erkannt und der Nutzer darauf hingewiesen wird (gelb markiert werden).  
+2. Ein gelber Tag-Hinweis „Doppeltes Suchkriterium“ oberhalb des Eingabefeldes angezeigt wird.  
+3. Die Gesamtzahl der eindeutigen Einträge korrekt berechnet und oberhalb des Eingabefeldes angezeigt wird.  
+4. Wird ein doppelter Wert wieder gelöscht, verschwinden alle Hinweise und Markierungen wieder.
+
 
 
