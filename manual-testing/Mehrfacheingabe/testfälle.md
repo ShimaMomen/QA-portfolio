@@ -1,15 +1,9 @@
 ## Testfälle
 
-| Test Case ID | Description                     | Steps                                         | Expected Result                    |
-|--------------|---------------------------------|-----------------------------------------------|------------------------------------|
-| TC_01        | Login with valid credentials    | 1. Go to login page  
-2. Enter valid email  
-3. Enter valid password  
-4. Click login | User is redirected to dashboard |
-| TC_002       | Login with invalid password     | 1. Go to login page  
-2. Enter valid email  
-3. Enter invalid password  
-4. Click login | Error message is displayed      |
-| TC_003       | Login with empty fields         | 1. Go to login page  
-2. Leave fields empty  
-3. Click login | Validation errors appear        |
+| **TC-ID** | **Titel** | **Ziel / Beschreibung** | **Voraussetzungen** | **Schritte** | **Erwartetes Ergebnis** | **Testart** |
+|-----------|-----------|------------------------|-------------------|--------------|------------------------|-------------|
+| **TC01** | Eingabe eines einzelnen Suchkriteriums | Verifikation, dass eindeutige Werte korrekt gezählt und ohne Warnungen angezeigt werden. | Komponente „Mehrfacheingabe“ ist geladen. | 1.z.B. Nr. 012511196 eingeben <br>2. Eingabe bestätigen| 1- Suchkriterium <br>2- Keine Markierungen oder Warnhinweise <br>3- die zahl | Funktional / Positivtest |
+| **TC02** | Eingabe eines doppelten Suchkriteriums | Prüfung der Erkennung und Markierung doppelter Werte sowie Anzeige des Warnhinweises. | Ein eindeutiger Wert wurde bereits eingegeben. |Tippe erneut gleiche Nummer ein, Beobachte die Markierung und den Hinweis | 1- Alle gleiche Nummern sind **gelb markiert**<br> 2- Tag: **„Doppeltes Suchkriterium“** erscheint<br> 3- Zählung bleibt **1** | Funktional / Negativtest |
+| **TC03** | Eingabe mehrerer eindeutiger Suchkriterien | Sicherstellen korrekter Zählung bei unterschiedlichen Werten. | Komponente ist leer. | Eingabe mehrerer unterschiedlicher Nummern | 1- Suchkriterium <br>2- Keine Markierungen oder Warnhinweise <br>3- Anzeige der Gesamtzahl der Einträge | Funktional / Positivtest |
+| **TC04** | Mehrere doppelte Suchkriterien eingeben | Validierung, dass alle mehrfach vorkommenden Werte korrekt markiert werden. | Komponente ist leer. | ```1. „Apfel“ eingeben 2. „Birne“ eingeben 3. Wieder „Birne“ eingeben 4. Wieder „Apfel“ eingeben``` | - „Apfel“ & „Birne“ **gelb markiert**<br>- Tag: **„Doppeltes Suchkriterium“** erscheint<br>- Zählung: **2 eindeutige Werte** | Funktional / Negativtest |
+| **TC05** | Löschen eines doppelten Wertes | Sicherstellen, dass Markierungen und Warnhinweise bei Auflösung der Duplikate entfernt werden. | Doppelte Werte existieren (z. B. „Apfel“ zweimal). | ```1. Einen „Apfel“-Eintrag löschen``` | - Gelbe Markierung verschwindet<br>- Hinweis-Tag verschwindet<br>- Zählung: **1 eindeutiges Suchkriterium** | Funktional / Regression / Negativtest |
