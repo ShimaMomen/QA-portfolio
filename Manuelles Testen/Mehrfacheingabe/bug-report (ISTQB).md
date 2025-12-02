@@ -4,66 +4,60 @@
 DEF-MEHRFACHEINGABE-001
 
 
-
 ## **2. Titel**
-Markierung und Hinweis „Doppeltes Suchkriterium“ verschwinden nach Löschen eines Duplikats nicht
-
+Doppelte Suchkriterien werden nicht vollständig gelb markiert, obwohl ein Duplikat eingegeben wird.
 
 
 ## **3. Beschreibung**
-Beim Test der Komponente **Mehrfacheingabe** wurde festgestellt, dass nach dem Löschen eines doppelten Suchkriteriums die **gelbe Markierung** nicht entfernt wird.  
-Zusätzlich bleibt der Hinweis-Tag **„Doppeltes Suchkriterium“** sichtbar, obwohl kein Duplikat mehr existiert.  
+Beim Test der Komponente **Mehrfacheingabe** wurde festgestellt, dass bei der Eingabe eines bereits vorhandenen Suchkriteriums die Komponente das Duplikat nicht korrekt erkennt.
+Der Hinweis-Tag „Doppeltes Suchkriterium“ erscheint ebenfalls nicht.  
 
-Dieses Verhalten entspricht nicht den definierten Akzeptanzkriterien.
-
+Der Fehler widerspricht dem Acceptance Criterion:
+„Sollte der User mehrere gleiche Suchkriterien eingeben, werden alle identischen Einträge gelb markiert und der Tag ‚Doppeltes Suchkriterium‘ wird angezeigt.“
 
 
 ## **4. Testumgebung**
-- Build-Version: `2025.01.15`
+- Build-Version: `15.04.2025`
 - Browser: `Chrome 121.0`
 - Betriebssystem: `Windows 10`
-- Testsystem: `QA/Staging`
-
 
 
 ## **5. Schritte zur Reproduktion**
 1. Komponente „Mehrfacheingabe“ öffnen  
-2. Wert **„012511196“** eingeben und bestätigen  
+2. Den Wert **„012511196“** eingeben und mit Enter bestätigen  
 3. Den gleichen Wert **„012511196“** erneut eingeben  
 4. Beobachten: Beide Werte werden gelb markiert, Hinweis-Tag erscheint  
 5. Einen der beiden Einträge **löschen**
 
 
 
-## **6. Erwartetes Ergebnis**
-- Die gelbe Markierung verschwindet vollständig  
+## **6. Erwartetes Ergebnis**  
+- Beide Werte „012511196“ sind gelb markiert  
+- Tag „Doppeltes Suchkriterium“ wird oberhalb des Eingabefelds angezeigt 
+- Nach dem Löschen eines der doppelten Werte verschwindet die gelbe Markierung vollständig
 - Der Hinweis-Tag **„Doppeltes Suchkriterium“** verschwindet  
 - Zählung zeigt **1** eindeutigen Wert  
-- Keine zusätzlichen UI-Warnungen sichtbar
 
 
 
 ## **7. Tatsächliches Ergebnis**
-- Die gelbe Markierung bleibt sichtbar, obwohl nur ein Wert vorhanden ist  
-- Hinweis-Tag bleibt weiterhin sichtbar  
-- Optional: Zählung aktualisiert sich korrekt (je nach Systemverhalten)  
-- UI-Zustand widerspricht den Funktionsanforderungen
-
+- Die gelbe Markierung erscheint nicht
+- Kein Hinweis-Tag „Doppeltes Suchkriterium“ erscheint
+- Die Zählung wird fälschlicherweise auf 2 erhöht, statt bei 1 zu bleiben
+  
 
 
 ## **8. Schweregrad (Severity)**
 **Medium**
 
----
 
 ## **9. Priorität**
 **High**
 
 
-
 ## **10. Betroffene Anforderungen**
 - **ACR-MEHRFACHEINGABE-002:** Markierung von doppelten Suchkriterien  
-- **ACR-MEHRFACHEINGABE-003:** Entfernen der Icons/Hinweise beim Entfernen eines Duplikats
+- **ACR-MEHRFACHEINGABE-003:** Entfernen der Hinweise beim Entfernen eines Duplikats
 
 
 
@@ -74,10 +68,16 @@ Dieses Verhalten entspricht nicht den definierten Akzeptanzkriterien.
 
 
 ## **12. Anhänge**
-- Screenshot: `Mehrfachmarkierung-nach-Löschen.png`  
+- Screenshots  
 
 
 
+## **13. Status**  
+**open**
 
-## **13. Status: open**
+## **14. Erstellt von / Datum**
+
+QA Analyst: Shima Momen  
+Datum: 15.04.2025
+
 
