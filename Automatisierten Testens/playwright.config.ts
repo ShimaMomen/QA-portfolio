@@ -55,13 +55,13 @@ export default defineConfig({
     {
       name: 'firefox',
       dependencies: ["setup"],
-      use: { ...devices['Desktop Firefox'] },
+      use: { ...devices['Desktop Firefox'], permissions: ["clipboard-read"] },
     },
 
     {
       name: 'webkit',
       dependencies: ["setup"],
-      use: { ...devices['Desktop Safari'] },
+      use: { ...devices['Desktop Safari'], permissions: ["clipboard-read"] },
     },
 
     /* Test against mobile viewports. */
