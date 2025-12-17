@@ -1,8 +1,8 @@
 import { test, expect } from '@playwright/test';
 
+// This file contains three end-to-end tests for the login functionality of the OrangeHRM demo site.
 
-
-
+// 1:
 test ('Login with valid credentials', async ({ page }) => {
 
 await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
@@ -14,6 +14,7 @@ await expect(page).toHaveURL('https://opensource-demo.orangehrmlive.com/web/inde
 
 });
 
+// 2:
 test ('Login with invalid credentials', async ({ page }) => {
 
 await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
@@ -27,6 +28,8 @@ await expect(errorMessage).toHaveText('Invalid credentials');
 
     });
 
+
+// 3:
 test ('Login with missing password', async ({ page }) => {
 
 await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
