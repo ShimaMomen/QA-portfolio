@@ -14,7 +14,7 @@ import { read } from 'fs';
  */
 export default defineConfig({
   timeout: 60000,
-  testDir: './tests',
+  testDir: 'Automatisierten Testens/tests',
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
